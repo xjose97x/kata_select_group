@@ -1,0 +1,23 @@
+{
+  "name": "Groups-Kata-Server",
+  "version": "0.0.1",
+  "description": "Select Group Kata - Server",
+  "license" : "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:j0n4s/kata_select_group.git"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.0",
+    "q": ">=1.4.1"
+  },
+  "devDependencies": {
+    "less-middleware": ">=2.1.0"
+  },
+  "engines": {
+    "node": ">=4.2.0"
+  }
+}
