@@ -1,5 +1,20 @@
 <h3>Group</h3>
 <br>
 <div>
-  <br><a href="#/" class="kataFont">Home</a>
+    <form ng-submit="employee.process()" name="kataForm" id="kataForm" novalidate>
+        <button type="button" ng-click="employee.add()">Add another employee group!</button>
+        <div class="form-group" ng-repeat="employees in employee.groups track by $index">
+            <input type="number" min="1000" max="1999" class="form-control" ng-model="employees.first" required />
+            <input type="number" min="2000" max="2999" class="form-control" ng-model="employees.second" required />
+            <button type="button" ng-click="employee.remove($index)">Remove group</button>
+        </div>
+        <input ng-disabled="kataForm.$invalid" type="submit" id="submit" value="Submit" />
+    </form>
+    <div ng-if="result">
+        The employees that will go to the beach are:
+        <ol>
+            <li ng-repeat="employee in result" ng-bind="employee"></li>
+        </ol>
+    </div>
+    <br><a href="#/" class="kataFont">Home</a>
 </div>
